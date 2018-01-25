@@ -1,0 +1,17 @@
+executable = full_sim.py
+arguments = $(energy) $(detector) --number $(number) --threshold $(threshold) --amplification $(amplification) --output out.dat -g /data/user/hskarlupka/gp_fasig_scalable_radio_array/out_$(engery)_$(cluster).dat
+log = log.$(energy).$(cluster)
+output = out.$(energy).$(cluster)
+error = err.$(energy).$(cluster)
+request_cpus = 1
+request_memory = 1GB
+request_disk = 10GB
+transfer_executable = true
+Requirements = HAS_SINGULARITY == TRUE
+
++SingularityImage = "/cvmfs/singularity.opensciencegrid.org/wipac/fasig_scalable_radio_array:latest"
++SingularityBindCVMFS = True
+
+use_x509userproxy = true
+
+queue 1000

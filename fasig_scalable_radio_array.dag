@@ -1,0 +1,12 @@
+JOB 5e6 fasig_scalable_radio_array.submit
+JOB 1e7 fasig_scalable_radio_array.submit
+JOB 2e7 fasig_scalable_radio_array.submit
+JOB 5e7 fasig_scalable_radio_array.submit
+VARS ALL_NODES amplification="1e4"
+VARS ALL_NODES detector="51"
+VARS ALL_NODES number="100"
+VARS ALL_NODES threshold="1"
+VARS 5e6 energy="5e6"
+VARS 1e7 energy="1e7"
+VARS 2e7 energy="2e7"
+VARS 5e7 energy="5e7"

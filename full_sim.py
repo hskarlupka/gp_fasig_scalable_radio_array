@@ -1,4 +1,4 @@
-#!/user/bin/python3.6
+#!/usr/bin/python3.6
 """Script for running a full detector simulation"""
 
 import sys
