@@ -1,8 +1,8 @@
 executable = full_sim.py
-arguments = $(energy) $(detector) --number $(number) --threshold $(threshold) --amplification $(amplification) --output out.dat -g /data/user/hskarlupka/gp_fasig_scalable_radio_array/out_$(energy)_$(Process).dat
-log = log.$(energy).$(Process)
-output = out.$(energy).$(Process)
-error = err.$(energy).$(Process)
+arguments = $(energy) $(detector) --number $(number) --threshold $(threshold) --amplification $(amplification) --output out.dat -g /data/user/hskarlupka/gp_fasig_scalable_radio_array/out_$(energy)_$(num).dat
+log = log.$(energy).$(num)
+output = out.$(energy).$(num)
+error = err.$(energy).$(num)
 request_cpus = 1
 request_memory = 1GB
 request_disk = 10GB
