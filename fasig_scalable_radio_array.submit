@@ -14,4 +14,4 @@ Requirements = HAS_SINGULARITY == TRUE
 
 use_x509userproxy = true
 
-queue 1000
+queue
