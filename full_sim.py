@@ -457,3 +457,4 @@ if args.grid_output:
             break
         except:
             sleep(30)
+os.remove(args.output)
