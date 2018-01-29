@@ -6,6 +6,8 @@ number = "100"
 threshold = "1"
 
 with open('fasig_scalable_radio_array.dag', 'w') as f:
+    f.write('RETRY ALL_NODES 1000\n')
+    f.write('SCRIPT POST ALL_NODES post_script.py /data/user/hskarlupka/gp_fasig_scalable_radio_array $JOB\n')
     f.write('VARS ALL_NODES amplification="{}"\n'.format(amplification))
     f.write('VARS ALL_NODES detector="{}"\n'.format(detector))
     f.write('VARS ALL_NODES number="{}"\n'.format(number))
@@ -15,4 +17,3 @@ with open('fasig_scalable_radio_array.dag', 'w') as f:
             f.write('JOB {}_{} fasig_scalable_radio_array.submit\n'.format(energy, i))
             f.write('VARS {}_{} energy="{}"\n'.format(energy, i, energy))
             f.write('VARS {}_{} num="{}"\n'.format(energy, i, i))
-            f.write('SCRIPT POST {}_{} post_script.py /data/user/hskarlupka/gp_fasig_scalable_radio_array $JOB\n'.format(energy, i))
