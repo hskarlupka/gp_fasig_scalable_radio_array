@@ -15,3 +15,4 @@ with open('fasig_scalable_radio_array.dag', 'w') as f:
             f.write('JOB {}_{} fasig_scalable_radio_array.submit\n'.format(energy, i))
             f.write('VARS {}_{} energy="{}"\n'.format(energy, i, energy))
             f.write('VARS {}_{} num="{}"\n'.format(energy, i, i))
+            f.write('SCRIPT POST {}_{} post_script.py /data/user/hskarlupka/gp_fasig_scalable_radio_array $JOB\n'.format(energy, i))

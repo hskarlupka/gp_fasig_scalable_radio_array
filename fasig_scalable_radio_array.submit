@@ -7,7 +7,9 @@ request_cpus = 1
 request_memory = 1GB
 request_disk = 10GB
 transfer_executable = true
+job_lease_duration = 120
 Requirements = HAS_SINGULARITY == TRUE
+
 
 +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/wipac/fasig_scalable_radio_array:latest"
 +SingularityBindCVMFS = True
