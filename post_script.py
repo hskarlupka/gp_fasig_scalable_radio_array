@@ -18,7 +18,7 @@ for i in range(1, 5):
     try:
         output = check_output(cmd, shell=False, env=os.environ, stderr=STDOUT)
         for line in output.split('\n'):
-            if job in line:
+            if '{}.dat'.format(job) in line:
                 sys.exit(0)
         sys.exit(1)
     except Exception as e:
